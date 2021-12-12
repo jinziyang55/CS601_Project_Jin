@@ -42,24 +42,24 @@
             </a>
         </aside>
 
+        
         <main>
             <!--No JavaScript Warning-->
             <noscript>
-                <p class="error">For best experience, please enable JavaScript to visit this page. Thank you.</p>.
+                <p id="error_JS">For best experience, please enable JavaScript to visit this page. Thank you.</p>
             </noscript>
 
             <h2>Connect with Me</h2> 
 
-            <!--The form is posted to Formspree API. An email will also be sent to me if submitted successfully-->
+            <!--Post the form to a test API. An email will be sent if submitted successfully-->
             <form name = "myForm" id="myForm" action = "https://formspree.io/f/meqnqawd" method = "post" novalidate onsubmit="return validateForm();">
 
-                <!--Contact Info Input-->
                 <fieldset>
                     <legend>Contact Information</legend>
                     <label>First Name:</label>
                     <input type="text" class="input" name="firstName" id="firstName" required><br>
                     <label>Last Name:</label>   
-                    <input type="text" class="input" name="lastName" id="lastName" required><br>
+                    <input type="text"  class="input" name="lastName" id="lastName" required><br>
                     <label>Email Address:</label>
                     <input type="email" class="input" name="email" id="email" required><br>
                     <label>Phone Number:</label>
@@ -81,7 +81,7 @@
                 </fieldset>
                 <br>
 
-                <!--Attraction Checkbox-->
+                <!--Attraction checkbox-->
                 <fieldset>
                     <legend>What Attracts You</legend>
                     <input type="checkbox" name="attraction" value="airlines">
@@ -95,16 +95,12 @@
                 </fieldset>
                 <br>
 
-                <!--Message Textarea-->
                 <fieldset>
                     <legend>Leave a Message</legend>
                     <textarea class="input" rows="12" cols="100" name="message"></textarea> 
                 </fieldset>
                 <br>
-                <!--Error Message Area-->
-                <div class="error"></div>
-                <br><br>
-                <!--Submit Button-->
+                <div id="error"></div>
                 <div id="subArea"><input type="submit" id="submit" name="submitButton" value="Submit" ></div>
             </form>            
         </main>

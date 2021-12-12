@@ -21,63 +21,67 @@ window.onclick = function(event) {
 
 
 // Form elements validation
-  function validateForm(){
-    var firstName = document.getElementById("firstName");
-    var lastName = document.getElementById("lastName");
-    var email= document.getElementById("email");
-    var phoneNumber= document.getElementById("phoneNumber");
-    var numbers = /^[0-9]+$/;
-    var letters = /^[A-Za-z]+$/;
-
-    var error = document.getElementById("error");
-    var status=true;
-    error.innerHTML = "";
 
 
-    // ES6 Feature: Template String 
-    /*First name length validation */
-    if (firstName.value.length < 2) {
-        error.innerHTML += `Your first name must contain 2 or more characters. "${firstName.value}" is not valid.<br>`;
-        status=false;
-    }
+// Form elements validation
+function validateForm(){
+  var firstName = document.getElementById("firstName");
+  var lastName = document.getElementById("lastName");
+  var email= document.getElementById("email");
+  var phoneNumber= document.getElementById("phoneNumber");
+  var numbers = /^[0-9]+$/;
+  var letters = /^[A-Za-z]+$/;
 
-    /*First name letters validation */
-    if(firstName.value!=null && !firstName.value.match(letters)){
-        error.innerHTML+=`Your first name must contain alpha characters only. "${firstName.value}" is not valid. <br>`;
-        status=false;
-    }
+  var error = document.getElementById("error");
+  var status=true;
+  error.innerHTML = "";
 
-    /*Last name length validation */
-    if (lastName.value.length < 2) {
-        error.innerHTML+=`Your last name must contain 2 or more characters. "${lastName.value}" is not valid. <br>`;
-        status=false;
-    }
-
-    /*Last name letters validation */
-    if(lastName.value!=null && !lastName.value.match(letters)){
-        error.innerHTML+=`Your last name must contain alpha characters only. "${lastName.value}" is not valid. <br>`;
-        status=false;
-    }
-
-    //Email validation
-    if(!email.value.includes("@")){
-      error.innerHTML+= `Your Email address "${email.value}" is not valid. <br>`;
-      status=false;
-    }
-
-    //Phone number validation
-    if(!phoneNumber.value.match(numbers)){
-      error.innerHTML+=`Your phone number must contain numbers only."${phoneNumber.value}" is not valid. <br>`;
-      status=false;
-  }
-
-    //Phone number length validation
-    if(phoneNumber.value.length<4){
-      error.innerHTML+=`Your phone number must have at least 4 numbers."${phoneNumber.value}" is not valid. <br>`;
-      status=false;
-  }
-    return status;
+  // ES6 Feature: Template String 
+  /*First name length validation */
+  if (firstName.value.length < 2) {
+    error.innerHTML += `Your first name must contain 2 or more characters. "${firstName.value}" is not valid.<br>`;
+    status=false;
 }
+
+/*First name letters validation */
+if(firstName.value!=null && !firstName.value.match(letters)){
+    error.innerHTML+=`Your first name must contain alpha characters only. "${firstName.value}" is not valid. <br>`;
+    status=false;
+}
+
+/*Last name length validation */
+if (lastName.value.length < 2) {
+    error.innerHTML+=`Your last name must contain 2 or more characters. "${lastName.value}" is not valid. <br>`;
+    status=false;
+}
+
+/*Last name letters validation */
+if(lastName.value!=null && !lastName.value.match(letters)){
+    error.innerHTML+=`Your last name must contain alpha characters only. "${lastName.value}" is not valid. <br>`;
+    status=false;
+}
+
+//Email validation
+if(!email.value.includes("@")){
+  error.innerHTML+= `Your Email address "${email.value}" is not valid. <br>`;
+  status=false;
+}
+
+//Phone number validation
+if(!phoneNumber.value.match(numbers)){
+  error.innerHTML+=`Your phone number must contain numbers only."${phoneNumber.value}" is not valid. <br>`;
+  status=false;
+}
+
+//Phone number length validation
+if(phoneNumber.value.length<4){
+  error.innerHTML+=`Your phone number must have at least 4 numbers."${phoneNumber.value}" is not valid. <br>`;
+  status=false;
+}
+
+return status;
+}
+
 
 // Course Class in Transcript
 class Course {
