@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Experience</title>
+    <link href="style.css" rel="stylesheet">
+    <script src = "script.js" defer></script>
+</head>
+<body> 
+    <!--Grid Container-->
+    <div class="branch-container">
+
+        <header>
+            <h1>Ziyang Jin's Portfolio</h1>
+        </header>
+
+        <!--Navigation Bar-->
+        <nav>    
+            <ul>
+                <li><a href="index.html">Homepage</a></li>                
+                <li><a href="education.html">Education Experience</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="photos.html">Photo Gallery</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="connect.html">Connect with Me</a></li>
+            </ul>       
+        </nav>  
+
+        <!--Education Table-->
+        <main>
+
+            <!--No JavaScript Warning-->
+            <noscript>
+                <p class="error">For best experience, please enable JavaScript to visit this page. Thank you.</p>.
+            </noscript>
+
+            <section id="edu-table">
+            <h2>My Education Experience</h2>         
+                <table>
+                    <tr>
+                        <td><img src="./images/NUAA.png" alt="Nanjing University of Aeronautics and Astronautics Logo" width="110"> </td>
+                        <td>
+                            <a href="http://www.nuaa.edu.cn" target="_blank">Nanjing University of Aeronautics and Astronautics</a>
+                            <p>Because of my enthusiasm in aviation since very young, I studied Air Transport Engineering in Nanjing University of Aeronautics and Astronautics during 2012-2016. The main courses are Aircraft System, Aviation Chart, Aeronautical Meterology, Flight Performance Engineering, Radar and Communication Navagation. I learned the aircarft principles and flight operation basis knowledge. I feel it is my life-long passion to pursue. </p>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td><img src="./images/BU.png" alt="Boston University Logo" width="150"> </td>
+                        <td>
+                            <a href="http://www.bu.edu" target="_blank">Boston University</a>
+                            <p>Due to the Covid, we have to suspend most of our international flights including all the flights to United States. To take advantage of this period of time, I enrolled Software Development Program in Boston Unversity in 2020 Fall. I learned Python, Java, SQL, Data Structures and Algorithms, Design Patterns, Artificial Intelligence and Web Application Development. I am expected to graduate in January 2022 and hope to work as a front-end web and mobile developer in the future.</p>                       
+                        </td>         
+                    </tr>
+                </table>
+            </section>
+            
+            <!--Transcript Vue App-->
+            <section id="app">
+
+                <!--Button to show/hide the transcript-->
+                <button id ="transcript1" class="transcript" @click="toggleShowTranscript(0)">Show/Hide My Undergraduate Transcript</button>
+                <button id ="transcript2" class="transcript" @click="toggleShowTranscript(1)">Show/Hide My Postgraduate Transcript</button>  <br><br>
+
+                <!--Input the keyword to search for matching course number or course name-->
+                <input type="text" class="input" placeholder="Search a Course..." v-model="search">
+
+                <!--Transcript Table-->
+                <table id="result" v-for="transcript in transcripts" v-show="transcript.showTranscript">
+                    <tr><th class="head" colspan="4">My {{transcript.level}} Transcript</th></tr>
+                    <tr><th>School</th><th>Program</th><th>Type</th><th>Year Conferred</th></tr>
+                    <tr>
+                        <td id="c1">{{transcript.school}} </td>
+                        <td id="c2">{{transcript.program}} </td>
+                        <td id="c3">{{transcript.type}} </td>
+                        <td id="c4">{{transcript.year}} </td>
+                    </tr>
+                    <tr><th>Course Number</th><th colspan="2">Course Title</th><th>Grade (4.0 Scale)</th></tr>
+
+                    <!--Courses corresponding to the filering keyword above-->
+                    <tr v-for="course in filteredList(transcript)">
+                        <td>{{course.code}}</td>
+                        <td colspan="2">{{course.name}}</td>
+                        <td >{{course.grade}}</td>
+                    </tr>
+
+                    <!--GPA Calculation-->
+                    <tr>
+                        <th colspan="2" class="GPA">Overall GPA: </th>
+                        <th colspan="2" class="GPA">{{calculateGPA(transcript)}}</th>
+                    </tr>           
+                </table> 
+            </section>
+        </main>  
+
+        <!--Compoyright & My Email Hyperlink-->
+        <footer>
+            <p>© 2021-Present Ziyang Jin, Boston University</p>
+            <a href="mailto:ziyjin@bu.edu">ziyjin@bu.edu</a>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Me</title>
+    <link href="style.css" rel="stylesheet">
+    <script src = "script.js" defer></script>
+</head>
+<body>
+    <!--Grid Container-->
+    <div class="home-container">
+        <header>
+            <h1>Ziyang Jin's Portfolio</h1>
+        </header>
+
+        <!--Navigation Bar-->
+        <nav>    
+            <ul>
+                <li><a href="index.html">Homepage</a></li>                
+                <li><a href="education.html">Education Experience</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="photos.html">Photo Gallery</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="connect.html">Connect with Me</a></li>
+            </ul>       
+        </nav>  
+
+        <!--Selfie & Linkedin/Github Connection Sidebar-->
+        <aside>
+            <br><br><br>
+            <img id="selfie" src="./images/selfie.JPG" alt="My Selfie">   
+            <p>HELLO, I'M ZIYANG</p>
+            <p>Hainan Airlines Station Operation Manager</p>
+            <a href="https://www.linkedin.com/in/ziyang-jin" target="_blank">
+                <img class="logo" id="linkedin" src="./images/linkedin.png" alt="Linkedin Logo">
+            </a>
+            <br>
+            <a href="https://github.com/jinziyang55" target="_blank">
+                <img class="logo" id="github" src="./images/github.png" alt="Github Logo" >
+            </a>
+        </aside>
+
+        <main>
+            <!--No JavaScript Warning-->
+            <noscript>
+                <p class="error">For best experience, please enable JavaScript to visit this page. Thank you.</p>.
+            </noscript>
+
+            <h2>Connect with Me</h2> 
+
+            <!--The form is posted to Formspree API. An email will also be sent to me if submitted successfully-->
+            <form name = "myForm" id="myForm" action = "https://formspree.io/f/meqnqawd" method = "post" novalidate onsubmit="return validateForm();">
+
+                <!--Contact Info Input-->
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>First Name:</label>
+                    <input type="text" class="input" name="firstName" id="firstName" required><br>
+                    <label>Last Name:</label>   
+                    <input type="text" class="input" name="lastName" id="lastName" required><br>
+                    <label>Email Address:</label>
+                    <input type="email" class="input" name="email" id="email" required><br>
+                    <label>Phone Number:</label>
+                    <input type="tel" class="input" name="phoneNumber" id="phoneNumber">
+                </fieldset>
+                <br>
+                
+                <!--Location radio message box-->
+                <fieldset>
+                    <legend>Where Are You Located</legend>           
+                    <input type="radio" name="location" value="US">
+                    <label>United States</label><br>
+                    <input type="radio" name="location" value="Canada">
+                    <label>Canada</label><br>
+                    <input type="radio" name="location" value="China">
+                    <label>China</label><br>
+                    <input type="radio" name="location" value="others">
+                    <label>Others</label><br>
+                </fieldset>
+                <br>
+
+                <!--Attraction Checkbox-->
+                <fieldset>
+                    <legend>What Attracts You</legend>
+                    <input type="checkbox" name="attraction" value="airlines">
+                    <label>Airlines Experience</label><br>
+                    <input type="checkbox" name="attraction" value="software">
+                    <label>Software Development</label><br>
+                    <input type="checkbox" name="attraction" value="photo">
+                    <label>Photographic Work</label><br>
+                    <input type="checkbox" name="attraction" value="audio">
+                    <label>Audio Book Channel</label>
+                </fieldset>
+                <br>
+
+                <!--Message Textarea-->
+                <fieldset>
+                    <legend>Leave a Message</legend>
+                    <textarea class="input" rows="12" cols="100" name="message"></textarea> 
+                </fieldset>
+                <br>
+                <!--Error Message Area-->
+                <div class="error"></div>
+                <br><br>
+                <!--Submit Button-->
+                <div id="subArea"><input type="submit" id="submit" name="submitButton" value="Submit" ></div>
+            </form>            
+        </main>
+
+        <!--Compoyright & My Email Hyperlink-->
+        <footer>
+            <p>© 2021-Present Ziyang Jin, Boston University</p>
+            <a href="mailto:ziyjin@bu.edu">ziyjin@bu.edu</a>
+        </footer>
+    </div>
+</body>
+</html>

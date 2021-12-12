@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link href="style.css" rel="stylesheet">
+    <script src = "script.js" defer></script>
+</head>
+<body> 
+    <!--Grid Container-->
+    <div class="branch-container">
+
+
+        <header>
+            <h1>Ziyang Jin's Portfolio</h1>
+        </header>
+
+        <!--Navigation Bar-->
+        <nav>    
+            <ul>
+                <li><a href="index.html">Homepage</a></li>                
+                <li><a href="education.html">Education Experience</a></li>
+                <li><a href="work.html">Work Experience</a></li>
+                <li><a href="photos.html">Photo Gallery</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="connect.html">Connect with Me</a></li>
+            </ul>       
+        </nav>  
+
+        <main>
+            <!--No JavaScript Warning-->
+        <noscript>
+            <p class="error">For best experience, please enable JavaScript to visit this page. Thank you.</p>.
+        </noscript>
+            <h2>My Photo Gallery</h2>
+
+            <!--Flexbox Photo Gallery-->
+            <div class="row">
+                <section class="column">
+                    <h3>Graduation Memories in 2016</h3>
+                    <img src="./gallery/Graduation/G1.jpg" alt="Lake in Campus" onclick=showModal(this);>
+                    <img src="./gallery/Graduation/G2.jpg" alt="Helicopter in Campus" onclick=showModal(this);>
+                    <img src="./gallery/Graduation/G3.jpg" alt="Playground in Campus" onclick=showModal(this);>
+                    <img src="./gallery/Graduation/G4.jpg" alt="Classroom in Campus" onclick=showModal(this);>
+                    <img src="./gallery/Graduation/G5.jpg" alt="Graduation Trip: Sanya Beach" onclick=showModal(this);>
+                    <img src="./gallery/Graduation/G6.jpg" alt="Graduation Trip: Panda Zoo" onclick=showModal(this);>
+                </section>
+
+                <section class="column">
+                    <h3>Las Vegas Memories in 2019</h3>
+                    <img src="./gallery/LasVegas/LV1.jpg" alt="New York New York" onclick=showModal(this);>
+                    <img src="./gallery/LasVegas/LV2.jpg" alt="Bellagio Swan" onclick=showModal(this);>
+                    <img src="./gallery/LasVegas/LV3.jpg" alt="Bellagio Stone Statue" onclick=showModal(this);>
+                    <img src="./gallery/LasVegas/LV4.jpg" alt="Caesars Show" onclick=showModal(this);>
+                    <img src="./gallery/LasVegas/LV5.jpg" alt="Excalibur Casino" onclick=showModal(this);>
+                    <img src="./gallery/LasVegas/LV6.jpg" alt="Paris Casino" onclick=showModal(this);>
+                </section>
+
+                <section class="column">
+                    <h3>California Memories in 2021</h3>
+                    <img src="./gallery/CA1/CA1.jpg" alt="Little Pine Tree" onclick=showModal(this);>
+                    <img src="./gallery/CA1/CA2.jpg" alt="Lake Tahoe" onclick=showModal(this);>
+                    <img src="./gallery/CA1/CA3.jpg" alt="17-Mile-Drive" onclick=showModal(this);>
+                    <img src="./gallery/CA1/CA4.jpg" alt="CA-1 View 1" onclick=showModal(this);>
+                    <img src="./gallery/CA1/CA5.jpg" alt="CA-1 View 2" onclick=showModal(this);>
+                    <img src="./gallery/CA1/CA6.jpg" alt="CA-1 View 3" onclick=showModal(this);>
+                </section>
+            </div>
+
+            <!-- Photo Modal -->
+            <div id="photo-modal" class="modal">
+                <img src= "photo" alt="photo" class="modal-content" id="image">
+                <!-- Photo Caption -->
+                <div id="caption"></div>
+            </div>
+        </main>  
+
+        <!--Compoyright & My Email Hyperlink-->
+        <footer>
+            <p>© 2021-Present Ziyang Jin, Boston University</p>
+            <a href="mailto:ziyjin@bu.edu">ziyjin@bu.edu</a>
+        </footer>
+    </div>
+</body>
+</html>
