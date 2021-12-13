@@ -342,7 +342,6 @@ textarea{
 @media (max-width: 768px) {
     .home-container {
         padding: 10px;
-
         /* screen width < 768 px layout*/
         grid-template-areas:
         "h h"
@@ -362,19 +361,27 @@ textarea{
     }
 
     header {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
     nav ul li a{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     main h2{
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     main p,ol{
         font-size: 1rem;
+    }
+
+    .nuaa{
+        width:20%;
+    }
+
+    .bu{
+        width:20%;
     }
 
     aside{
