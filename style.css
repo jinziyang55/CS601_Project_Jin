@@ -137,10 +137,16 @@ main p,ol{
     font-size: 1.4rem;
 }
 
+#nuaa{
+    width:110px;
+}
 
+#bu{
+    width:150px;
+}
 table{
     table-layout: auto;
-    border-spacing: 30px;
+    border-spacing: 20px;
 
 }
 
@@ -228,7 +234,7 @@ table{
 /* Connection Form */
 #myForm{
     text-align: left;
-    padding:5px 50px;
+    padding:5px 20px;
     line-height: 22px;
     font-size: 1.1rem;
 }
@@ -376,12 +382,17 @@ textarea{
         font-size: 1rem;
     }
 
-    .nuaa{
+    .edu-table{
+        padding:0px;
+        margin: 0px;
+    }
+
+    #nuaa{
         width:55px;
     }
 
-    .bu{
-        width:75px;
+    #bu{
+        width:65px;
     }
 
     aside{
@@ -394,6 +405,15 @@ textarea{
     }
     #selfie{
         width:60%;
+    }
+
+    #pdf{
+        width:100%;
+    }
+
+    #myForm{
+        padding:0px;
+
     }
     footer{
         font-size: 1rem;
